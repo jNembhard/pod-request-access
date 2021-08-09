@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap");
+$font-stack: Chivo, sans-serif;
+$font-weight: 700;
+$primary-color: #54e6af;
+$body-color: #c2cbe5;
+$bg-color: #121725;
+$form-color: #2c344b;
+$header: #ffffff;
+$hover: #c2cbe5;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: $font-stack;
+  color: $header;
+  background-color: $bg-color;
+}
+
+.pod {
+  .pod__container {
+    z-index: 2;
+    margin: 261px 552px 130px 165px;
+    position: relative;
+    background-color: $bg-color;
+    border: 4px solid red;
+  }
+  .pod__header {
+    font-size: 52px;
+    text-transform: uppercase;
+    margin: 88px 58px 0 0;
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .pod__paragraph {
+    color: $body-color;
+    margin: 17px 278px 0 0;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .pod__form-container {
+    margin: 44px 296px 223px 0px;
+    display: flex;
+
+    input {
+      z-index: 3;
+      position: absolute;
+      width: 418px;
+      height: 56px;
+      background: $form-color;
+      border-radius: 50px;
+      margin: 44px 296px 93px 0;
+      text-indent: 31px;
+    }
+
+    div {
+      z-index: 3;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      width: 162px;
+      height: 46px;
+      color: $bg-color;
+      background-color: $primary-color;
+      border-radius: 50px;
+      margin: 50px 309px 63px 253px;
+    }
+  }
+
+  .pod__image-container {
+    z-index: 0;
+    width: 848px;
+    height: 640px;
+    position: absolute;
+    background: white;
+    top: 130px;
+    right: 0px;
+    bottom: 130px;
+    left: 552px;
+  }
+
+  //   .pod__testimonials {
+  //   }
+}

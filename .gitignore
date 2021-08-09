@@ -1,0 +1,11 @@
+# design files
+*.sketch
+*.fig
+*.xd
+
+# .DS_Store
+.DS_Store
+.prettierignore
+
+# folders
+/pod-request-access-sketch
