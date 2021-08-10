@@ -11,50 +11,54 @@ body {
   background-color: #121725;
 }
 
-.pod .pod__container {
-  z-index: 2;
-  margin: 261px 552px 130px 165px;
-  position: relative;
-  background-color: #121725;
-  border: 4px solid red;
+header {
+  margin: 102px 1140px 0 165px;
 }
 
-.pod .pod__header {
+.pod .pod__container {
+  z-index: 2;
+  margin: 103px 552px 130px 165px;
+  position: absolute;
+  background-color: #121725;
+}
+
+.pod .pod__container .pod__header {
   font-size: 52px;
   text-transform: uppercase;
   margin: 88px 58px 0 0;
 }
 
-.pod .pod__header span {
+.pod .pod__container .pod__header span {
   color: #54e6af;
 }
 
-.pod .pod__paragraph {
+.pod .pod__container .pod__paragraph {
   color: #c2cbe5;
   margin: 17px 278px 0 0;
   font-size: 16px;
   line-height: 28px;
 }
 
-.pod .pod__form-container {
-  margin: 44px 296px 223px 0px;
+.pod .pod__container form {
+  margin: 44px 296px 164px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.pod .pod__form-container input {
+.pod .pod__container form input {
   z-index: 3;
   position: absolute;
   width: 418px;
   height: 56px;
+  color: #ffffff;
   background: #2c344b;
   border-radius: 50px;
   margin: 44px 296px 93px 0;
   text-indent: 31px;
 }
 
-.pod .pod__form-container div {
+.pod .pod__container form div {
   z-index: 3;
   position: absolute;
   display: -webkit-box;
@@ -73,6 +77,24 @@ body {
   background-color: #54e6af;
   border-radius: 50px;
   margin: 50px 309px 63px 253px;
+  -webkit-box-shadow: 0 30px 30px -18px #54e6af;
+          box-shadow: 0 30px 30px -18px #54e6af;
+  cursor: pointer;
+}
+
+.pod .pod__container form div:hover {
+  background-color: #8bd9ca;
+  -webkit-box-shadow: 0 30px 30px -18px #337f6a;
+          box-shadow: 0 30px 30px -18px #337f6a;
+}
+
+.pod .pod__container form h6 {
+  position: absolute;
+  margin: 117px 296px 150px 40px;
+}
+
+.pod .pod__testimonials img {
+  margin-right: 20px;
 }
 
 .pod .pod__image-container {
@@ -85,5 +107,9 @@ body {
   right: 0px;
   bottom: 130px;
   left: 552px;
+}
+
+.pod .pod__image-container .dots {
+  margin: -57px 0 78px 650px;
 }
 /*# sourceMappingURL=styles.css.map */

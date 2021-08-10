@@ -1,4 +1,8 @@
+@import "_tablet.scss";
+@import "_mobile.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap");
+
 $font-stack: Chivo, sans-serif;
 $font-weight: 700;
 $primary-color: #54e6af;
@@ -20,58 +24,81 @@ body {
   background-color: $bg-color;
 }
 
+header {
+  margin: 102px 1140px 0 165px;
+}
+
 .pod {
   .pod__container {
     z-index: 2;
-    margin: 261px 552px 130px 165px;
-    position: relative;
+    margin: 103px 552px 130px 165px;
+    position: absolute;
     background-color: $bg-color;
-    border: 4px solid red;
-  }
-  .pod__header {
-    font-size: 52px;
-    text-transform: uppercase;
-    margin: 88px 58px 0 0;
-    span {
-      color: $primary-color;
-    }
-  }
 
-  .pod__paragraph {
-    color: $body-color;
-    margin: 17px 278px 0 0;
-    font-size: 16px;
-    line-height: 28px;
-  }
-
-  .pod__form-container {
-    margin: 44px 296px 223px 0px;
-    display: flex;
-
-    input {
-      z-index: 3;
-      position: absolute;
-      width: 418px;
-      height: 56px;
-      background: $form-color;
-      border-radius: 50px;
-      margin: 44px 296px 93px 0;
-      text-indent: 31px;
+    .pod__header {
+      font-size: 52px;
+      text-transform: uppercase;
+      margin: 88px 58px 0 0;
+      span {
+        color: $primary-color;
+      }
     }
 
-    div {
-      z-index: 3;
-      position: absolute;
+    .pod__paragraph {
+      color: $body-color;
+      margin: 17px 278px 0 0;
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    form {
+      margin: 44px 296px 164px 0px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      width: 162px;
-      height: 46px;
-      color: $bg-color;
-      background-color: $primary-color;
-      border-radius: 50px;
-      margin: 50px 309px 63px 253px;
+
+      input {
+        z-index: 3;
+        position: absolute;
+        width: 418px;
+        height: 56px;
+        color: $header;
+        background: $form-color;
+        border-radius: 50px;
+        margin: 44px 296px 93px 0;
+        text-indent: 31px;
+      }
+
+      div {
+        z-index: 3;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        width: 162px;
+        height: 46px;
+        color: $bg-color;
+        background-color: $primary-color;
+        border-radius: 50px;
+        margin: 50px 309px 63px 253px;
+        box-shadow: 0 30px 30px -18px $primary-color;
+        cursor: pointer;
+
+        &:hover {
+          background-color: mix($primary-color, $hover);
+          box-shadow: 0 30px 30px -18px mix($primary-color, $bg-color);
+        }
+      }
+
+      h6 {
+        position: absolute;
+        margin: 117px 296px 150px 40px;
+      }
+    }
+  }
+
+  .pod__testimonials {
+    img {
+      margin-right: 20px;
     }
   }
 
@@ -85,8 +112,9 @@ body {
     right: 0px;
     bottom: 130px;
     left: 552px;
-  }
 
-  //   .pod__testimonials {
-  //   }
+    .dots {
+      margin: -57px 0 78px 650px;
+    }
+  }
 }
