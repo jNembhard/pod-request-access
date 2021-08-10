@@ -13,6 +13,13 @@ body {
 
 header {
   margin: 102px 1140px 0 165px;
+  border: 2px solid red;
+}
+
+@media (max-width: 768px) {
+  header {
+    margin: 50px 594px 152px 39px;
+  }
 }
 
 .pod .pod__container {
@@ -20,6 +27,12 @@ header {
   margin: 103px 552px 130px 165px;
   position: absolute;
   background-color: #121725;
+}
+
+@media (max-width: 768px) {
+  .pod .pod__container {
+    margin: 258px 94px 257px 39px;
+  }
 }
 
 .pod .pod__container .pod__header {
@@ -32,6 +45,13 @@ header {
   color: #54e6af;
 }
 
+@media (max-width: 768px) {
+  .pod .pod__container .pod__header {
+    font-size: 48px;
+    margin: 93px 0 0;
+  }
+}
+
 .pod .pod__container .pod__paragraph {
   color: #c2cbe5;
   margin: 17px 278px 0 0;
@@ -39,11 +59,24 @@ header {
   line-height: 28px;
 }
 
+@media (max-width: 768px) {
+  .pod .pod__container .pod__paragraph {
+    font-size: 18px;
+    margin: 23px 180px 0 0;
+  }
+}
+
 .pod .pod__container form {
   margin: 44px 296px 164px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .pod .pod__container form {
+    margin: 0 208px 164px 0;
+  }
 }
 
 .pod .pod__container form input {
@@ -77,15 +110,15 @@ header {
   background-color: #54e6af;
   border-radius: 50px;
   margin: 50px 309px 63px 253px;
-  -webkit-box-shadow: 0 30px 30px -18px #54e6af;
-          box-shadow: 0 30px 30px -18px #54e6af;
+  -webkit-box-shadow: 0 30px 30px -18px #337f6a;
+          box-shadow: 0 30px 30px -18px #337f6a;
   cursor: pointer;
 }
 
 .pod .pod__container form div:hover {
   background-color: #8bd9ca;
-  -webkit-box-shadow: 0 30px 30px -18px #337f6a;
-          box-shadow: 0 30px 30px -18px #337f6a;
+  -webkit-box-shadow: 0 30px 30px -18px #54e6af;
+          box-shadow: 0 30px 30px -18px #54e6af;
 }
 
 .pod .pod__container form h6 {
@@ -99,17 +132,28 @@ header {
 
 .pod .pod__image-container {
   z-index: 0;
-  width: 848px;
-  height: 640px;
   position: absolute;
-  background: white;
   top: 130px;
-  right: 0px;
+  right: 0;
   bottom: 130px;
   left: 552px;
 }
 
 .pod .pod__image-container .dots {
   margin: -57px 0 78px 650px;
+}
+
+@media (max-width: 768px) {
+  .pod .pod__image-container {
+    position: inherit;
+    margin: -267px 0 0 277px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .pod .pod__image-container .dots {
+    margin: 145px 206px 0 -250px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

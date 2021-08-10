@@ -1,5 +1,6 @@
-@import "_tablet.scss";
-@import "_mobile.scss";
+// @import "_tablet.scss";
+// @import "_mobile.scss";
+@import "_global.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap");
 
@@ -26,6 +27,11 @@ body {
 
 header {
   margin: 102px 1140px 0 165px;
+  border: 2px solid red;
+
+  @include tablet {
+    margin: 50px 594px 152px 39px;
+  }
 }
 
 .pod {
@@ -35,12 +41,21 @@ header {
     position: absolute;
     background-color: $bg-color;
 
+    @include tablet {
+      margin: 258px 94px 257px 39px;
+    }
+
     .pod__header {
       font-size: 52px;
       text-transform: uppercase;
       margin: 88px 58px 0 0;
       span {
         color: $primary-color;
+      }
+
+      @include tablet {
+        font-size: 48px;
+        margin: 93px 0 0;
       }
     }
 
@@ -49,11 +64,20 @@ header {
       margin: 17px 278px 0 0;
       font-size: 16px;
       line-height: 28px;
+
+      @include tablet {
+        font-size: 18px;
+        margin: 23px 180px 0 0;
+      }
     }
 
     form {
       margin: 44px 296px 164px 0px;
       display: flex;
+
+      @include tablet {
+        margin: 0 208px 164px 0;
+      }
 
       input {
         z-index: 3;
@@ -80,12 +104,13 @@ header {
         background-color: $primary-color;
         border-radius: 50px;
         margin: 50px 309px 63px 253px;
-        box-shadow: 0 30px 30px -18px $primary-color;
+        box-shadow: 0 30px 30px -18px mix($primary-color, $bg-color);
+
         cursor: pointer;
 
         &:hover {
           background-color: mix($primary-color, $hover);
-          box-shadow: 0 30px 30px -18px mix($primary-color, $bg-color);
+          box-shadow: 0 30px 30px -18px $primary-color;
         }
       }
 
@@ -104,17 +129,28 @@ header {
 
   .pod__image-container {
     z-index: 0;
-    width: 848px;
-    height: 640px;
     position: absolute;
-    background: white;
     top: 130px;
-    right: 0px;
+    right: 0;
     bottom: 130px;
     left: 552px;
 
     .dots {
       margin: -57px 0 78px 650px;
+      // border: 6px solid $primary-color;
+    }
+
+    @include tablet {
+      position: inherit;
+      margin: -267px 0 0 277px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      .dots {
+        margin: 145px 206px 0 -250px;
+      }
     }
   }
 }
