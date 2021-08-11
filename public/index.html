@@ -83,12 +83,23 @@
     <footer>Coded by Jason Nembhard</footer>
   </body>
   <script type="text/javascript">
+    function windowChange(x) {
+      const $result = $("#result");
+
+      if (x.matches) {
+        $result.css("margin-top", "30px");
+        $result.css("margin-right", "0");
+        $result.css("margin-left", "-3px");
+      }
+    }
+
     function validateEmail(email) {
       let re = /\S+@\S+\.\S+/;
       return re.test(email);
     }
 
     function validate() {
+      let x = window.matchMedia("(max-width: 576px)");
       const $result = $("#result");
       const email = $("#email").val();
       $result.text("");
@@ -96,9 +107,13 @@
       if (validateEmail(email)) {
         $result.text(email + " is valid :)");
         $result.css("color", "#54e6af");
+        windowChange(x);
+        x.addListener(windowChange);
       } else {
         $result.text("Oops! Please check your email!");
         $result.css("color", "red");
+        windowChange(x);
+        x.addListener(windowChange);
       }
       return false;
     }
