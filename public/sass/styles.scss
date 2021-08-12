@@ -47,11 +47,17 @@ header {
 
 .pod {
   object-fit: contain;
+
   .pod__container {
     z-index: 2;
     margin: 103px 552px 130px 165px;
     position: absolute;
     background-color: $bg-color;
+
+    @include large {
+      width: 800px;
+      height: 700px;
+    }
 
     @include tablet {
       margin: 258px 94px 257px 39px;
@@ -252,7 +258,7 @@ header {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   color: $hover;
   width: 80%;
   bottom: 0;
@@ -260,15 +266,23 @@ footer {
   text-align: center;
   background: transparent;
 
+  @include large {
+    position: sticky;
+    margin-left: 45%;
+    margin-top: 60%;
+  }
+
   @include tablet {
-    width: inherit;
-    text-align: center;
-    right: 0;
-    bottom: 2%;
+    position: sticky;
+    margin-left: 20%;
   }
 
   @include mobile {
+    margin-left: inherit;
+    position: absolute;
+    text-align: center;
+    width: inherit;
     left: 0;
-    bottom: 20px;
+    bottom: 5px;
   }
 }

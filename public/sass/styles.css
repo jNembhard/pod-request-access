@@ -51,6 +51,13 @@ header {
   background-color: #121725;
 }
 
+@media screen and (min-width: 1101px) {
+  .pod .pod__container {
+    width: 800px;
+    height: 700px;
+  }
+}
+
 @media (max-width: 1100px) {
   .pod .pod__container {
     margin: 258px 94px 257px 39px;
@@ -292,7 +299,7 @@ header {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   color: #c2cbe5;
   width: 80%;
   bottom: 0;
@@ -303,19 +310,31 @@ footer {
   background: transparent;
 }
 
+@media screen and (min-width: 1101px) {
+  footer {
+    position: -webkit-sticky;
+    position: sticky;
+    margin-left: 45%;
+    margin-top: 60%;
+  }
+}
+
 @media (max-width: 1100px) {
   footer {
-    width: inherit;
-    text-align: center;
-    right: 0;
-    bottom: 2%;
+    position: -webkit-sticky;
+    position: sticky;
+    margin-left: 20%;
   }
 }
 
 @media (max-width: 576px) {
   footer {
+    margin-left: inherit;
+    position: absolute;
+    text-align: center;
+    width: inherit;
     left: 0;
-    bottom: 20px;
+    bottom: 5px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
