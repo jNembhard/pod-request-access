@@ -1,8 +1,8 @@
 @import "_global.scss";
-@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;1,300&display=swap");
 $font-stack: Chivo, sans-serif;
-$font-weight: 700;
+$font-weight: 300;
+$font-bold: 700;
 $primary-color: #54e6af;
 $body-color: #c2cbe5;
 $bg-color: #121725;
@@ -132,6 +132,7 @@ header {
         border-radius: 50px;
         margin: 44px 296px 93px 0;
         text-indent: 31px;
+        border-style: none;
 
         @include mobile {
           position: inherit;
@@ -153,9 +154,9 @@ header {
         color: $bg-color;
         background-color: $primary-color;
         border-radius: 50px;
-        margin: 50px 309px 63px 253px;
+        margin: 49px 309px 63px 250px;
         box-shadow: 0 30px 30px -18px mix($primary-color, $bg-color);
-
+        font-weight: $font-bold;
         cursor: pointer;
 
         &:hover {
@@ -258,34 +259,18 @@ header {
 }
 
 footer {
-  position: fixed;
   color: $hover;
-  width: 80%;
-  bottom: 0;
   align-items: center;
   text-align: center;
-  background: transparent;
+  bottom: 50px;
+  width: 90%;
 
   @include large {
-    position: sticky;
-    margin-left: 45%;
-    margin-top: 60%;
+    margin-top: 45%;
   }
 
   @include tablet {
-    display: block;
-    position: sticky;
-    bottom: 0;
-    left: 100%;
-  }
-
-  @include mobile {
-    margin-left: inherit;
-    position: absolute;
-    text-align: center;
-    width: inherit;
-    left: 0;
-    bottom: 5px;
-    display: inherit;
+    width: 100%;
+    margi-bottom: 10px;
   }
 }
